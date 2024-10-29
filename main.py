@@ -1,10 +1,10 @@
 import pyrogram, os, asyncio
 
-try: app_id = int(os.environ.get("app_id", None))
+try: app_id = int(os.environ.get("app_id", "24942826"))
 except Exception as app_id: print(f"⚠️ App ID Invalid {app_id}")
-try: api_hash = os.environ.get("api_hash", None)
+try: api_hash = os.environ.get("api_hash", "e3e2f3b65ef58634139ccd27d6b7d8cb")
 except Exception as api_id: print(f"⚠️ Api Hash Invalid {api_hash}")
-try: bot_token = os.environ.get("bot_token", None)
+try: bot_token = os.environ.get("bot_token", "7751130110:AAFPVcweTKO6OWCn8aTb-JDfDjWXAiouiAw")
 except Exception as bot_token: print(f"⚠️ Bot Token Invalid {bot_token}")
 try: custom_caption = os.environ.get("custom_caption", "`{file_name}`")
 except Exception as custom_caption: print(f"⚠️ Custom Caption Invalid {custom_caption}")
@@ -13,18 +13,10 @@ AutoCaptionBot = pyrogram.Client(
    name="AutoCaptionBot", api_id=app_id, api_hash=api_hash, bot_token=bot_token)
 
 start_message = """
-<b>👋Hello {}</b>
-<b>I am an AutoCaption bot</b>
-<b>All you have to do is add me to your channel and I will show you my power</b>
-<b>@Mo_Tech_YT</b>"""
+hlo boss"""
 
 about_message = """
-<b>• Name : [AutoCaption V1](t.me/{username})</b>
-<b>• Developer : [Muhammed](https://github.com/PR0FESS0R-99)
-<b>• Language : Python3</b>
-<b>• Library : Pyrogram v{version}</b>
-<b>• Updates : <a href=https://t.me/Mo_Tech_YT>Click Here</a></b>
-<b>• Source Code : <a href=https://github.com/PR0FESS0R-99/AutoCaption-Bot>Click Here</a></b>"""
+fuck off mara owner use karaga bas tu gand mara"""
 
 @AutoCaptionBot.on_message(pyrogram.filters.private & pyrogram.filters.command(["start"]))
 def start_command(bot, update):
